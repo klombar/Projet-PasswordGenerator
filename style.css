@@ -1,0 +1,138 @@
+*{
+   color: white;
+}
+
+body{
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: lightblue;
+}
+
+.passwordGenerator{
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(32, 32, 32);
+   gap: 20px;
+   width: 100%;
+   max-width: 500px;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   border: 1px solid black;
+   box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.passwordGenerator-title{
+   font-weight: 700;
+   text-align: center;
+   background-color: grey;
+}
+
+.passwordGenerator-screen{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: grey;
+   height: 50px;
+   border: 1px solid black;
+   padding: 0px 20px;
+}
+
+.passwordGenerator-screen-screen{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.5rem;
+   color: white;
+   width: 100%;
+   height: 100%;
+}
+
+.passwordGenerator-copyIcon{
+   font-size: 1.3rem;
+}
+
+.passwordGenerator-modal{
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   border: 1px solid black;
+   padding: 25px;
+   background-color: grey;
+}
+
+.passwordGenerator-modal-title{
+   font-weight: 700;
+   text-align: center;
+}
+
+.passwordGenerator-modal-charactereLength{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.passwordGenerator-modal-charactereLength-titleNumber{
+   display: flex;
+   justify-content: space-between;
+}
+
+.passwordGenerator-modal-charactereLength-range{
+   display: flex;
+   justify-content: center;
+}
+
+.passwordGenerator-modal-charactereLength-range input{
+   width: 100%;
+}
+
+.passwordGenerator-modal-input{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: grey;
+   gap: 10px;
+}
+
+.passwordGenerator-modal-strengthIndicator{
+   display: flex;
+   justify-content: space-between;
+}
+
+.passwordGenerator-modal-strengthIndicator-bar{
+   border: 1px solid black;
+   display: flex;
+   gap: 10px;
+}
+
+.passwordGenerator-modal-buttons{
+   display: flex;
+   justify-content: center;
+
+}
+
+.passwordGenerator-modal-buttons-generate{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+   background-color: rgb(165, 164, 164);
+   font-size: 1.2rem;
+   border-radius: 4px;
+   padding: 5px;
+}
+
+.passwordGenerator-modal-charactereLength-title,
+.passwordGenerator-modal-strengthIndicator-title,
+.passwordGenerator-modal-strengthIndicator-title{
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+.input-group{
+   font-size: 1.3rem;
+}
