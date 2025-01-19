@@ -4,7 +4,7 @@
 
 body{
    margin: 0;
-   padding: 0;
+   padding: 20px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -20,10 +20,7 @@ body{
    width: 100%;
    max-width: 500px;
    padding: 20px;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   border: 1px solid black;
-   box-shadow: 0 0 5px rgba(0,0,0,0.1);
+   border-radius: 10px;
 }
 
 .passwordGenerator-title{
@@ -45,8 +42,10 @@ body{
 .passwordGenerator-screen-screen{
    display: flex;
    align-items: center;
-   justify-content: center;
-   font-size: 1.5rem;
+   justify-content: start;
+   font-size: 2.3rem;
+   font-weight: bold;
+   padding-left: 10px;
    color: white;
    width: 100%;
    height: 100%;
@@ -54,6 +53,11 @@ body{
 
 .passwordGenerator-copyIcon{
    font-size: 1.3rem;
+   cursor: pointer;
+}
+
+.passwordGenerator-copyIcon i{
+   color: #11f3bb;
 }
 
 .passwordGenerator-modal{
@@ -79,6 +83,13 @@ body{
 .passwordGenerator-modal-charactereLength-titleNumber{
    display: flex;
    justify-content: space-between;
+   align-items: center;
+}
+
+.passwordGenerator-modal-charactereLength-number{
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: #11f3bb;
 }
 
 .passwordGenerator-modal-charactereLength-range{
@@ -86,8 +97,19 @@ body{
    justify-content: center;
 }
 
-.passwordGenerator-modal-charactereLength-range input{
+.passwordGenerator-modal-charactereLength-range-input{
    width: 100%;
+   cursor: pointer;
+   appearance: none;
+   border-radius: 10px;
+}
+
+.passwordGenerator-modal-charactereLength-range-input::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   background-color: #11f3bb;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
 }
 
 .passwordGenerator-modal-input{
@@ -104,35 +126,78 @@ body{
 }
 
 .passwordGenerator-modal-strengthIndicator-bar{
-   border: 1px solid black;
    display: flex;
    gap: 10px;
+}
+
+.passwordGenerator-modal-strengthIndicator-bar-title{
+   display: flex;
+   align-items: center;
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-size: 1.3rem;
+   font-weight: bold;
 }
 
 .passwordGenerator-modal-buttons{
    display: flex;
    justify-content: center;
-
+   gap: 30px;
 }
 
-.passwordGenerator-modal-buttons-generate{
+.passwordGenerator-modal-buttons-generate,
+.passwordGenerator-modal-buttons-clear{
    display: flex;
    justify-content: center;
    align-items: center;
    gap: 5px;
-   background-color: rgb(165, 164, 164);
-   font-size: 1.2rem;
+   background-color: #11f3bb;
+   color: white;
+   font-size: 1.3rem;
+   font-weight: bold;
    border-radius: 4px;
-   padding: 5px;
+   padding: 5px 10px;
+   cursor: pointer;
 }
 
 .passwordGenerator-modal-charactereLength-title,
 .passwordGenerator-modal-strengthIndicator-title,
 .passwordGenerator-modal-strengthIndicator-title{
-   font-size: 1.5rem;
+   font-size: 1.3rem;
    font-weight: bold;
 }
 
 .input-group{
+   display: flex;
+   align-items: center;
+   gap: 15px;
    font-size: 1.3rem;
+}
+
+input[type="checkbox"] {
+   position: relative;
+   appearance: none; 
+   width: 20px; 
+   height: 20px; 
+   color: white;
+   border: 2px solid #ccc; 
+   border-radius: 4px;
+   background-color: white; 
+   cursor: pointer;
+   transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+input[type="checkbox"]:checked {
+   background-color: #11f3bb; 
+   border-color: #11f3bb; 
+}
+
+input[type="checkbox"]:checked::after{
+   content: "✔"; 
+   font-size: 1.3rem;
+   color: white; 
+   position: absolute;
+   top: 50%; 
+   left: 50%; 
+   transform: translate(-50%, -50%); 
 }
